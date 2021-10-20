@@ -12,7 +12,7 @@ const LaunchRequestHandler = {
     },
     handle(handlerInput) {
         const audioUrl = Util.getS3PreSignedUrl('Media/cheers.mp3').replace(/&/g, '&amp;');
-        const speakOutput = `Hello Raheel Ashraf <audio src="${audioUrl}"/>`;
+        const speakOutput = ` <audio src="${audioUrl}"/> Raheel Ashraf`;
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
